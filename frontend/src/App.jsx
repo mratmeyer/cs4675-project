@@ -32,4 +32,30 @@ function App() {
   )
 }
 
-export default App
+function TestApp() {
+  // Make typeable search bar
+  return (
+    <>
+      <h1>Ask Buzz</h1>
+      <div className="search-bar">
+        <form action="">
+          <input type="text" placeholder="Ask Buzz anything..." name="search" />
+          
+          <button>
+            Search
+          </button>
+        </form>
+      </div>
+    </>
+  );
+}
+// Post request to /search POST
+
+
+function searchQuery(queryParams) {
+  // Gets called when search params
+
+}
+
+
+export default TestApp
