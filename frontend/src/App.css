@@ -74,7 +74,8 @@
   font-weight: bold;
 }
 
-.search-bar-response-page {
+.search-bar-response {
+  
   width: 600px;
   margin: 20px auto;
   padding: 10px;
@@ -84,7 +85,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar-response-page input[type="text"] {
+.search-bar-response input[type="text"] {
   width: 70%;
   height: 30px;
   padding: 10px;
@@ -96,7 +97,7 @@
   font-size: medium;
 }
 
-.search-bar-response-page button[type="submit"] {
+.search-bar-response button[type="submit"] {
   width: 20%;
   height: 30px;
   background-color: #007bff;
@@ -118,11 +119,19 @@
   gap: 20px;
 }
 
+.items-container a:hover{
+  color:#007bff;
+}
+
+.block-item:hover{
+  background-color: #e2e2e2;
+}
+
 .block-item {
   display: flex;
   justify-content: center; 
   align-items: center;
-  width: 150px; 
+  width: 200px; 
   height: 150px; 
   background-color: #f0f0f0;
   border: 1px solid #ccc;

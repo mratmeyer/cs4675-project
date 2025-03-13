@@ -64,14 +64,14 @@ function SearchQuery(queryParams) {
   // Links section
   var data = {
     "summary": "This is the summary",
-    "events": ["March 1st", "March 2nd"],
-    "links": ["www.google.com", "www.amazon.com"]
+    "events": ["March 1st", "March 2nd", "March 3rd"],
+    "links": ["https://www.google.com", "https://www.amazon.com"]
   }
 
   return (
     <>
-      <h2>Search Query Response Page</h2>
-      <div className="search-bar-response-page">
+      
+      <div className="search-bar-response">
         <form action="">
           <input type="text" placeholder="Ask Buzz anything..." name="search" />
           <button>
@@ -100,7 +100,9 @@ function SearchQuery(queryParams) {
         <h3>Links</h3>
         <div className="items-container">
           {data["links"].map((link, index) => (
+            <a href={link}>
             <div key={index} className='block-item'>{link}</div>
+            </a>
           ))}
         </div>
 
