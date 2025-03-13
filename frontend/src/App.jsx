@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import askBuzzLogo from '../ask-buzz-logo.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -70,7 +71,20 @@ function SearchQuery(queryParams) {
 
   return (
     <>
-      
+
+      <div className="logo-container">
+        <div className="logo">
+          <span style={{ color: '#4285f4' }}>A</span>
+          <span style={{ color: '#ea4335' }}>s</span>
+          <span style={{ color: '#fbbc05' }}>k</span>
+          <span className="space" />
+          <span style={{ color: '#4285f4' }}>B</span>
+          <span style={{ color: '#34a853' }}>u</span>
+          <span style={{ color: '#ea4335' }}>z</span>
+          <span style={{ color: '#fbbc05' }}>z</span>
+        </div>
+      </div>
+
       <div className="search-bar-response">
         <form action="">
           <input type="text" placeholder="Ask Buzz anything..." name="search" />
@@ -101,7 +115,7 @@ function SearchQuery(queryParams) {
         <div className="items-container">
           {data["links"].map((link, index) => (
             <a href={link}>
-            <div key={index} className='block-item'>{link}</div>
+              <div key={index} className='block-item'>{link}</div>
             </a>
           ))}
         </div>
