@@ -36,6 +36,14 @@
     height:150px;
   }
 
+  .logo-container-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    cursor: pointer;
+  }
+
   .logo {
     font-family: 'Catamaran', sans-serif;
     font-size: 48px;
@@ -43,6 +51,15 @@
     display: flex;
     padding:20px;
     height:100px;
+  }
+
+  .logo-results {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    padding: 0px;
+    height: 45px;
   }
 
   .logo span {

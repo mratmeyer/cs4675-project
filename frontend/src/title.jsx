@@ -1,9 +1,16 @@
+import {useNavigate} from 'react-router-dom'
 import './title.css'
 
-function Title() {
+function Title({results}) {
+    const navigate = useNavigate();
+
+    const handleLogoCLick = () => {
+        navigate('/')
+    }
+
     return (
-        <div className="logo-container">
-            <div className="logo">
+        <div className={`logo-container${results ? '-results': ''}`} onClick={handleLogoCLick}>
+            <div className={`logo${results ? '-results': ''}`}>
             <span style={{ color: '#4285f4' }}>A</span>
             <span style={{ color: '#ea4335' }}>s</span>
             <span style={{ color: '#fbbc05' }}>k</span>

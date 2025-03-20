@@ -1,40 +1,10 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom'
 import './App.css'
 // import askBuzzLogo from '../ask-buzz-logo.png'
 import Title from './title.jsx'
 import SearchBar from './search-bar.jsx'
 import SearchResults from './search-result.jsx'
 
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
 
 // function TestApp() {
 //   // Make typeable search bar
@@ -55,17 +25,29 @@ import SearchResults from './search-result.jsx'
 // }
 // // Post request to /search POST
 
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/results" element={<SearchQuery />}/>
+      </Routes>
+    </Router>
+  )
+}
+
+function Home() {
+  return (
+    <>
+      <Title results = {false}/>
+      <SearchBar results = {false}/>
+    </>
+  )
+}
+
 
 function SearchQuery(queryParams) {
   // Gets called when search params
-
-  // Make Logo and Search bar at top, 
-
-  // Summary section
-
-  // Dates
-
-  // Links section
   var data = {
     "summary": "This is the summary",
     "events": ["March 1st", "March 2nd", "March 3rd"],
@@ -74,11 +56,8 @@ function SearchQuery(queryParams) {
 
   return (
     <>
-      
-      <Title/>
-
-      <SearchBar/>
-
+      <Title results = {true}/>
+      <SearchBar results = {true}/>
       <SearchResults data={data}/>
     </>
   );
@@ -88,4 +67,4 @@ function SearchQuery(queryParams) {
 }
 
 
-export default SearchQuery
+export default App
