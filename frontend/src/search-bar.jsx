@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './search-bar.css'
 
 function SearchBar({results, onSearch}) {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   // const [searchParams] = useSearchParams();
   // const initialQuery = searchParams.get("query") || "";
   const [query, setQuery] = useState('')
@@ -15,7 +15,7 @@ function SearchBar({results, onSearch}) {
   const handleSearchClick = (event) => {
     event.preventDefault();
     if (query.trim() !== '') {
-      navigate(query);
+      navigate(`/results?search=${encodeURIComponent(query)}`);
     }
   }
 

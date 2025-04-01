@@ -1,29 +1,10 @@
-import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, useNavigate, useLocation} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 // import askBuzzLogo from '../ask-buzz-logo.png'
 import Title from './title.jsx'
 import SearchBar from './search-bar.jsx'
 import SearchResults from './search-result.jsx'
-
-
-// function TestApp() {
-//   // Make typeable search bar
-//   return (
-//     <>
-//       <h1>Ask Buzz</h1>
-//       <div className="search-bar">
-//         <form action="">
-//           <input type="text" placeholder="Ask Buzz anything..." name="search" />
-
-//           <button>
-//             Search
-//           </button>
-//         </form>
-//       </div>
-//     </>
-//   );
-// }
-// // Post request to /search POST
 
 function App() {
   return (
@@ -52,14 +33,7 @@ function Home() {
 }
 
 
-function SearchQuery(queryParams) {
-  // Gets called when search params
-  // var data = {
-  //   "summary": "This is the summary",
-  //   "events": ["March 1st", "March 2nd", "March 3rd"],
-  //   "links": ["https://www.google.com", "https://www.amazon.com"]
-  // }
-
+function SearchQuery() {
   const location = useLocation(); //gets current URL
   const queryParams = new URLSearchParams(location.search); //extracts search parameter
   const query = queryParams.get('search') || ''; //get search term

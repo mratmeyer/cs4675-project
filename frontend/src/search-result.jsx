@@ -6,7 +6,7 @@ import Links from './links'
 function SearchResults({data}) {
     return (
         <>
-            
+            <p>{data.SearchResults.Events}</p>
         </>
     )
 }
