@@ -6,12 +6,8 @@ import Links from './links'
 function SearchResults({data}) {
     return (
         <>
-            <Summary data={data}/>
-
-            <Events data={data}/>
-    
-            <Links data={data}/>
-    </>
+            
+        </>
     )
 }
 
