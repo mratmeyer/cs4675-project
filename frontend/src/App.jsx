@@ -42,9 +42,12 @@ function SearchQuery() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!query) return;
+
     async function fetchResults() {
+      setLoading(true);
       try {
-        const response = await fetch('https://qaq2w3yefaclutxxbb3s4hfeea0dgnsj.lambda-url.us-east-1.on.aws/');
+        const response = await fetch(`https://qaq2w3yefaclutxxbb3s4hfeea0dgnsj.lambda-url.us-east-1.on.aws/?query=${encodeURIComponent(query)}`);
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -56,7 +59,7 @@ function SearchQuery() {
     }
 
     fetchResults();
-  }, [query]);
+  }, [query, location.search]);
 
 
   return (
