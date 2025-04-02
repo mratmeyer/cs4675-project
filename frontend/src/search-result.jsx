@@ -9,10 +9,8 @@ function SearchResults({ data }) {
     <div className="search-results">
       <h2>Search Results</h2>
       
-      {/* Display the summary */}
       {data.summary && <p><strong>{data.summary}</strong></p>}
 
-      {/* Display each event in results */}
       {data.results && data.results.length > 0 ? (
         <ul>
           {data.results.map((event, index) => (

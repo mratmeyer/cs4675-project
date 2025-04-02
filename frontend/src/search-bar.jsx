@@ -4,14 +4,8 @@ import './search-bar.css'
 
 function SearchBar({results, onSearch}) {
   const navigate = useNavigate()
-  // const [searchParams] = useSearchParams();
-  // const initialQuery = searchParams.get("query") || "";
   const [query, setQuery] = useState('')
-
-  // useEffect(() => {
-  //   setQuery(initialQuery);
-  // }, [initialQuery]);
-
+  
   const handleSearchClick = (event) => {
     event.preventDefault();
     if (query.trim() !== '') {
