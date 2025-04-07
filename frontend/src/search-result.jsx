@@ -1,18 +1,35 @@
-import './search-results.css'
-import Summary from "./summary"
-import Events from "./events"
-import Links from './links'
+import React from "react";
 
-function SearchResults({data}) {
-    return (
-        <>
-            <Summary data={data}/>
+function SearchResults({ data }) {
+  if (!data) {
+    return <p>No results found.</p>;
+  }
 
-            <Events data={data}/>
-    
-            <Links data={data}/>
-    </>
-    )
+  return (
+    <div className="search-results">
+      <h2>Search Results</h2>
+      
+      {data.summary && <p><strong>{data.summary}</strong></p>}
+
+      {data.results && data.results.length > 0 ? (
+        <ul>
+          {data.results.map((event, index) => (
+            <li key={index} className="event-card">
+              <h3>{event.description}</h3>
+              <p><strong>Date:</strong> {event.date}</p>
+              <p><strong>Time:</strong> {event.time}</p>
+              <p><strong>Department:</strong> {event.department}</p>
+              <a href={event.calendar_link} target="_blank" rel="noopener noreferrer">
+                View Event Details
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No events found.</p>
+      )}
+    </div>
+  );
 }
 
-export default SearchResults
+export default SearchResults;

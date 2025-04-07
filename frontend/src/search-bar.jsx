@@ -2,20 +2,14 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './search-bar.css'
 
-function SearchBar({results}) {
+function SearchBar({results, onSearch}) {
   const navigate = useNavigate()
-  const [searchParams] = useSearchParams();
-  const initialQuery = searchParams.get("query") || "";
   const [query, setQuery] = useState('')
-
-  useEffect(() => {
-    setQuery(initialQuery);
-  }, [initialQuery]);
-
+  
   const handleSearchClick = (event) => {
     event.preventDefault();
     if (query.trim() !== '') {
-      navigate(`/results?query=${encodeURIComponent(query)}`);
+      navigate(`/results?search=${encodeURIComponent(query)}`);
     }
   }
 
