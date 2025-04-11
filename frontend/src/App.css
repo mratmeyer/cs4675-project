@@ -6,4 +6,41 @@
 }
 
 
+.response-list {
+  list-style-type: none;
+} 
 
+.response-list-item {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 2%;
+  margin: 5% 0;
+  transition: transform 0.2s;
+  
+}
+
+.response-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 5px rgba(83, 91, 242, 0.6);
+}
+
+.response-list-item p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 4%;
+}
+
+.response-list-item h3 {
+  color: #646cff;
+  text-decoration: inherit;
+}
+.response-list-item:hover h3 {
+  color: #535bf2;
+}
+
+.response-list-item:hover a {
+  color: #535bf2;
+  font-weight: 600;
+}
