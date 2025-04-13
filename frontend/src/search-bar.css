@@ -1,6 +1,5 @@
 .search-bar-response {
-    width: 90%;
-    min-width: 600px;
+    width: 50vw;
     margin: 5% auto;
     padding: 1.5%;
     background-color: #f0f0f0;
@@ -10,8 +9,7 @@
   }
 
   .search-bar-response-results {
-    width: 90%;
-    min-width: 600px;
+    width: 50vw;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
