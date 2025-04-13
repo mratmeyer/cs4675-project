@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Routes, Route, useNavigate, useLocation} from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import './App.css'
-// import askBuzzLogo from '../ask-buzz-logo.png'
 import Title from './title.jsx'
 import SearchBar from './search-bar.jsx'
 import SearchResults from './search-result.jsx'

@@ -1,10 +1,23 @@
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './search-bar.css'
 
 function SearchBar({results, onSearch}) {
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const getQueryParam = () => {
+    const params = new URLSearchParams(location.search)
+    return params.get('search') || ''
+  }
+
   const [query, setQuery] = useState('')
+
+  useEffect(() => {
+    if (results) {
+      setQuery(getQueryParam())
+    }
+  }, [location.search, results])
   
   const handleSearchClick = (event) => {
     event.preventDefault();

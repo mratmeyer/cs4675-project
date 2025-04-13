@@ -1,5 +1,3 @@
-import './block-responses.css'
-
 function Links({data}) {
     return (
         <div className="block-responses">

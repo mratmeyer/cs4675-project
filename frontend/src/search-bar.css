@@ -1,57 +1,59 @@
 .search-bar-response {
-    width: 600px;
-    margin: 20px auto;
-    padding: 10px;
+    width: 90%;
+    min-width: 600px;
+    margin: 5% auto;
+    padding: 1.5%;
     background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: .05em solid #ddd;
+    border-radius: .7em;
+    box-shadow: 0 0 .8em rgba(0, 0, 0, 0.1);
   }
 
   .search-bar-response-results {
-    width: 600px;
+    width: 90%;
+    min-width: 600px;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: .05em solid #ddd;
+    border-radius: .7em;
+    box-shadow: 0 0 .8em rgba(0, 0, 0, 0.1);
   }
   
   .search-bar-response input[type="text"] {
     width: 70%;
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
+    height: 50%;
+    padding: 1.5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 2%;
+    border: .05em solid #ccc;
     font-weight: bold;
     font-size: medium;
-    border-radius: 20px;
+    border-radius: 1em;
   }
 
   .search-bar-response-results input[type="text"] {
     width: 80%;
-    height: 10px;
-    padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    border: 1px solid #ccc;
+    height: 50%;
+    padding: 1.5%;
+    margin-bottom: 0.7%;
+    margin-top: 0.7%;
+    margin-right: 0.7%;
+    margin-left: 0.7%;
+    border: .05em solid #ccc;
     font-weight: bold;
     font-size: medium;
-    border-radius: 20px;
+    border-radius: 1em;
   }
   
   .search-bar-response button[type="submit"] {
     width: 20%;
-    height: 30px;
+    height: 30%;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: .7em;
     cursor: pointer;
     font-weight: bold;
   }

@@ -1,5 +1,3 @@
-import './block-responses.css'
-
 function Events({data}) {
     return (
         <div className="block-responses">
