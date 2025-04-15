@@ -43,3 +43,10 @@
   color: #535bf2;
   font-weight: 600;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -26,7 +26,9 @@ function Home() {
   return (
     <>
       <Title results = {false}/>
-      <SearchBar results = {false} onSearch={handleSearch}/>
+      <div className="search-container">
+        <SearchBar results = {false} onSearch={handleSearch}/>
+      </div>
     </>
   )
 }
@@ -64,7 +66,9 @@ function SearchQuery() {
   return (
     <>
       <Title results = {true}/>
-      <SearchBar results = {true}/>
+      <div className="search-container">
+        <SearchBar results={true} />
+      </div>
       {loading ? <p>Loading...</p> : <SearchResults data={data} />}
     </>
   );
