@@ -18,7 +18,7 @@ function SearchResults({ data }) {
               <p><strong>Date:</strong> {event.date}</p>
               <p><strong>Time:</strong> {event.time}</p>
               <p><strong>Department:</strong> {event.department}</p>
-              <a href={event.calendar_link} target="_blank" rel="noopener noreferrer">
+              <a href={event.link} target="_blank" rel="noopener noreferrer">
                 View Event Details
               </a>
             </div>
