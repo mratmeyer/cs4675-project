@@ -1,4 +1,3 @@
-import './summary.css'
 
 function Summary({data}) {
     return(

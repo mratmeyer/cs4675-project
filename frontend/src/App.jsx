@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Routes, Route, useNavigate, useLocation} from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import './App.css'
-// import askBuzzLogo from '../ask-buzz-logo.png'
 import Title from './title.jsx'
 import SearchBar from './search-bar.jsx'
 import SearchResults from './search-result.jsx'
@@ -27,7 +26,9 @@ function Home() {
   return (
     <>
       <Title results = {false}/>
-      <SearchBar results = {false} onSearch={handleSearch}/>
+      <div className="search-container">
+        <SearchBar results = {false} onSearch={handleSearch}/>
+      </div>
     </>
   )
 }
@@ -65,7 +66,9 @@ function SearchQuery() {
   return (
     <>
       <Title results = {true}/>
-      <SearchBar results = {true}/>
+      <div className="search-container">
+        <SearchBar results={true} />
+      </div>
       {loading ? <p>Loading...</p> : <SearchResults data={data} />}
     </>
   );
