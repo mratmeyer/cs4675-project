@@ -51,15 +51,4 @@ Connects to the backend API for all event data and LLM-powered responses.
 - Vite
 
 ---
-
-## 🔌 React + Vite Plugins
-
-This project supports two official plugins for React Fast Refresh:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) (uses [Babel](https://babeljs.io/))
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) (uses [SWC](https://swc.rs/))
-
-Refer to their docs for advanced configuration.
-
----
 For more details on the full project, see the main [README](../README.md).
