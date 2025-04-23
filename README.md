@@ -1,6 +1,6 @@
 # 🐝 Ask Buzz – GT Calendar Assistant
 
-A full-stack web application that aggregates Georgia Tech calendar events, provides intelligent search and summaries using LLMs, and offers a modern, responsive frontend.
+A full-stack web application that aggregates Georgia Tech calendar events, provides intelligent search and summaries using OpenAI API, and offers a modern, responsive frontend.
 
 ---
 
