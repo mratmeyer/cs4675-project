@@ -32,7 +32,6 @@ This is the user-facing web client for Ask Buzz, built with React and Vite. It p
 ## 📁 Project Structure
 - `src/` – Main React source code
 - `public/` – Static assets
-- `index.html` – App entry point
 
 ---
 
